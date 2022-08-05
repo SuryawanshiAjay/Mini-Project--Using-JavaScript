@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form onclick="validate()" action="https://www.amazon.in/b?ie=UTF8&node=21761261031&pf_rd_r=86V4BV5PGPQER8BEGPAD&pf_rd_p=d63c37e6-591c-43e9-b9bd-142d7848fd46&pd_rd_r=9cf6549e-ba9a-4641-ac9c-9c5252bdacca&pd_rd_w=FPdzM&pd_rd_wg=K8RTs&ref_=pd_gw_unk" target="_blank">
+
+    <input id="name" placeholder="username" type="text">
+    <br><br>
+    <input id="password" placeholder="password" type="password">
+    <br><br>
+    <button onclick="validate()">submit</button>
+</form>
+<script>
+    function validate()
+    {
+        var username = document.getElementById("name");
+        var password = document.getElementById("password");
+
+        if(username.value.trim() == "" || password.value.trim()=="") 
+        {
+            alert("no blank value")
+            return false;
+        }
+        else
+        {
+            true;
+        }
+    }
+</script>
+</body>
+</html>

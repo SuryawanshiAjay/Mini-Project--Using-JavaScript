@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<fieldset style="background-color: rgb(149, 255, 0);" im>
+        <legend>fill the form</legend>
+        <p>username : <input type="text"></p>
+        <p>name : <input type="text"></p>
+        <p>password : <input type="password"></p>
+        <p>confirm password : <input type="password"></p>
+        <p> <input type="checkbox" id="agree">
+        <label for="agree">I agree terms and condition</label>
+    </p>
+    <input type="submit" value="Register" id="register" disabled>
+</fieldset>
+
+<script>
+       agree.addEventListener ('change', function()
+       {
+        let register = document.getElementById("register")
+        if(agree.checked)
+        {
+            register.removeAttribute("disabled")
+        }
+        else
+        {
+            register.setAttribute("disabled", "disabled")
+        }
+       })
+</script>
+
+</body>
+</html>

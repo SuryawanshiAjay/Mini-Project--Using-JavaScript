@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div
+        {
+            border: 2px solid black;
+            padding: 20px;
+            width: 60%;
+            height: auto;
+            margin: auto;
+        }
+
+        input
+        {
+            float: right;
+        }
+
+        form
+        {
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form>
+            <label for="phy">Physics</label>
+            <input type="number" id="phy" name="phy">
+            <br><br>
+            <label for="che">Chemistry</label>
+            <input type="number" id="che" name="che">
+            <br><br>
+            <label for="bio">Biology</label>
+            <input type="number" id="bio" name="bio">
+            <br><br>
+            <label for="maths">Maths</label>
+            <input type="number" id="maths" name="maths">
+            <br><br>
+            <button id="btn">Calculate</button>
+        </form>
+                <h1 id="res"></h1>
+    </div>
+    
+    <script>
+
+        var btn = document.getElementById("btn");
+        btn.addEventListener("click",
+        function(e)
+
+        {
+            var input1 = document.getElementById("phy").value;
+            var input2 = document.getElementById("che").value;
+            var input3 = document.getElementById("bio").value;
+            var input4 = document.getElementById("maths").value;
+
+            var total = parseInt(input1)+parseInt(input2)+parseInt(input3)+parseInt(input4);
+            perc = total/400.0*100;
+        
+            e.preventDefault();
+            var h1 = document.getElementById("res");
+            h1.textContent = "percentage = "+perc;
+
+         })
+
+    </script>
+</body>
+</html>
